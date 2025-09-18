@@ -23,13 +23,16 @@ app.set("view engine" , 'ejs');
 
 console.log('GAy1')
 
-//4 routing  req
+// 4 Routing code
+app.post("/create-item", (req, res) => {
+    console.log(req.body);
+    res.json({ test: "success" });
+});
+
 app.get("/" , function ( req ,  res) {
-    res.end('hi world')
+    res.render('harid');
 });
-app.get("/gift" , function ( req ,  res) {
-    res.end('mana sizga sovga')
-});
+
 const server = http.createServer(app);
 let PORT = 3000;
 server.listen(PORT , function(){
