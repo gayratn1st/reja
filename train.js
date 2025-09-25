@@ -8,7 +8,7 @@ function letterCounter(letter, word)
   .length;  };
 
 console.log(letterCounter("s", "webter")); // there's no S in word
-console.log(letterCounter("s", "webster")); // There is S in word
+console.log(letterCounter("s", "websters")); // There is S in word
 console.log(letterCounter("o", "webster"));  // there is letter which word doesn't contain
 
 
