@@ -1,15 +1,40 @@
+// TASK-B 
+
+function numberCounter(str) {
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    let ele = str[i]; 
+    if (ele >= '0' && ele <= '9') {
+      count++;
+    }
+  }
+  return count;
+}
+
+  console.log(numberCounter('22eihr44jdscn324'))
+  console.log(numberCounter('пвадылдьва'))
+  console.log(numberCounter('123456789'))
+  
+  
+
+
+
+
+
+
+
 // TASK-A
 
 
-function letterCounter(letter, word) 
-{
-  return word.split('')
-  .filter(a => a === letter)
-  .length;  };
+// function letterCounter(letter, word) 
+// {
+//   return word.split('')
+//   .filter(a => a === letter)
+//   .length;  };
 
-console.log(letterCounter("s", "webter")); // there's no S in word
-console.log(letterCounter("s", "websters")); // There is S in word
-console.log(letterCounter("o", "webster"));  // there is letter which word doesn't contain
+// console.log(letterCounter("s", "webter")); // there's no S in word
+// console.log(letterCounter("s", "websters")); // There is S in word
+// console.log(letterCounter("o", "webster"));  // there is letter which word doesn't contain
 
 
 
