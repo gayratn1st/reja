@@ -1,6 +1,10 @@
 const http = require("http");
 const mongodb = require("mongodb");
 
+// const express = require("express");
+// const app = express();
+// app.use(express.static("public"));
+
 let db;
 const connectionString =
   "mongodb+srv://ggbro:123@cluster0.2sjrasc.mongodb.net/Reja";
@@ -16,8 +20,6 @@ mongodb.connect(
     else {
       console.log("MongoDB connection succeed"); 
       module.exports = client;
-      
-
       const app = require("./app");
       const server = http.createServer(app);
       let PORT = 3000;

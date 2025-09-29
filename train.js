@@ -1,19 +1,36 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // TASK-B 
 
-function numberCounter(str) {
-  let count = 0;
-  for (let i = 0; i < str.length; i++) {
-    let ele = str[i]; 
-    if (ele >= '0' && ele <= '9') {
-      count++;
-    }
-  }
-  return count;
-}
+// function numberCounter(str) {
+//   let count = 0;
+//   for (let i = 0; i < str.length; i++) {
+//     let ele = str[i]; 
+//     if (ele >= '0' && ele <= '9') {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
 
-  console.log(numberCounter('22eihr44jdscn324'))
-  console.log(numberCounter('пвадылдьва'))
-  console.log(numberCounter('123456789'))
+//   console.log(numberCounter('22eihr44jdscn324'))
+//   console.log(numberCounter('пвадылдьва'))
+//   console.log(numberCounter('123456789'))
   
   
 
