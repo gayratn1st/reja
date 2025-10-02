@@ -1,46 +1,66 @@
-// TASk-C
-class Shop {
-  constructor(non, lagmon, cola) {
-    this.non = non;
-    this.lagmon = lagmon;
-    this.cola = cola;
-  }
+// TASK-D
 
-  qoldiq() {
-    const now = new Date();
-    const hours = now.getHours();
-    const minutes = now.getMinutes();
-    console.log(`Hozir ${hours}:${minutes}da ${this.non}ta non, ${this.lagmon}ta lag'mon va ${this.cola}ta cola mavjud`);
-  };
+function checkContent(a, b)
+ {
+  if (typeof a !== 'string' || typeof b !== 'string') 
+    return false;
 
- sotish(product, amount) {
-  if (this[product] !== undefined) {
-    if (this[product] >= amount) {
-      this[product] -= amount;
-      console.log(`${amount}ta ${product} sotildi`);
-    } else {
-      console.log(`Warning: Buncha ${product} bu yerda yo'q`);
-    }
-  } else {
-    console.log(`Bunday mahsulot mavjud emas: ${product}`);
-  } };
+  const sortirovka = s => s.split('').sort().join('');  //ajratib , tartibga keltirish , keyin qayta qushish , to make them kinda same 
 
-qoshish(product, amount) {
-  if (this[product] !== undefined) {
-    this[product] += amount;
-    console.log(`${amount}ta ${product} qo'shildi`);
-  } else {
-    console.log(`Bunday mahsulot mavjud emas: ${product}`);
-  }
-}  
-
+  return sortirovka(a)=== sortirovka(b); // birhil bo'lganligini tekshirish 
 }
-// console.log(cart)
-const shop = new Shop(4 ,5 ,2);
-shop.qoldiq();
-shop.sotish("non" , 3);
-shop.qoshish("cola",4);  
-shop.qoldiq();
+
+console.log(checkContent("mitgroup", "gmtiprou")); //true
+console.log(checkContent("gayratjon", "jongayrat"));  //true
+
+console.log(checkContent("gayratjon", "abror")); //false
+
+
+
+
+// TASk-C
+// class Shop {
+//   constructor(non, lagmon, cola) {
+//     this.non = non;
+//     this.lagmon = lagmon;
+//     this.cola = cola;
+//   }
+
+//   qoldiq() {
+//     const now = new Date();
+//     const hours = now.getHours();
+//     const minutes = now.getMinutes();
+//     console.log(`Hozir ${hours}:${minutes}da ${this.non}ta non, ${this.lagmon}ta lag'mon va ${this.cola}ta cola mavjud`);
+//   };
+
+//  sotish(product, amount) {
+//   if (this[product] !== undefined) {
+//     if (this[product] >= amount) {
+//       this[product] -= amount;
+//       console.log(`${amount}ta ${product} sotildi`);
+//     } else {
+//       console.log(`Warning: Buncha ${product} bu yerda yo'q`);
+//     }
+//   } else {
+//     console.log(`Bunday mahsulot mavjud emas: ${product}`);
+//   } };
+
+// qoshish(product, amount) {
+//   if (this[product] !== undefined) {
+//     this[product] += amount;
+//     console.log(`${amount}ta ${product} qo'shildi`);
+//   } else {
+//     console.log(`Bunday mahsulot mavjud emas: ${product}`);
+//   }
+// }  
+
+// }
+// // console.log(cart)
+// const shop = new Shop(4 ,5 ,2);
+// shop.qoldiq();
+// shop.sotish("non" , 3);
+// shop.qoshish("cola",4);  
+// shop.qoldiq();
 // notice , I use help of ai for this 
 
 

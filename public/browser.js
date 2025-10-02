@@ -1,3 +1,6 @@
+// const { response } = require("express");
+// const response  = require("express");
+
 console.log("Fronedn ishga tushdi");
 
 function itemTemplate(item){
@@ -38,8 +41,7 @@ document.getElementById('create-form').addEventListener('submit' , function(e) {
 
 document.addEventListener('click' , function(e) {
     //delete operation
-    console.log(e.target);
-
+    // console.log(e.target);
     if(e.target.classList.contains('delete-me')) {
         if(confirm('Aminmisiz?')) {
             axios
@@ -56,9 +58,33 @@ document.addEventListener('click' , function(e) {
 
     //edit operation 
     if(e.target.classList.contains('edit-me')) {
-        alert('You pressed Edit button');
+        let userInput = prompt(
+            "O'zgartirish kiriting",
+            e.target.parentElement.parentElement.querySelector(".item-text").innerHTML
+        );
+        if(userInput) {
+            axios
+            .post("/edit-item" , {id:e.target.getAttribute('data-id'), 
+                new_input: userInput,
+            })
+                .then((response)=>{
+                    console.log(response.data);
+                    e.target.parentElement.parentElement.querySelector(
+                        ".item-text"
+                    ).innerHTML = userInput;
+                }).catch(err =>{
+                console.log('Please , try again')
+                });
+        }
     }
     
+});
+
+
+document.getElementById('clean-all').addEventListener('click' , function(){
+    axios.post("/delete-all", {delete_all: true })
+    .then(response => {
+        alert(response.state);
+        document.location.reload();
+    }) 
 })
-
-
