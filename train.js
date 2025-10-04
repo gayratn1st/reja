@@ -1,19 +1,36 @@
-// TASK-D
+// TASK-E 
 
-function checkContent(a, b)
- {
-  if (typeof a !== 'string' || typeof b !== 'string') 
-    return false;
-
-  const sortirovka = s => s.split('').sort().join('');  //ajratib , tartibga keltirish , keyin qayta qushish , to make them kinda same 
-
-  return sortirovka(a)=== sortirovka(b); // birhil bo'lganligini tekshirish 
+function getReverse(str) {
+  return str.split('').reverse().join('');  // used  almost similar  actions as the previous one , but .reverse() instead of splitting 
 }
 
-console.log(checkContent("mitgroup", "gmtiprou")); //true
-console.log(checkContent("gayratjon", "jongayrat"));  //true
+console.log(getReverse('hello'))
 
-console.log(checkContent("gayratjon", "abror")); //false
+console.log(getReverse('Gayratjon'))
+
+console.log(getReverse('조네스'))
+
+
+
+
+
+
+// // TASK-D
+
+// function checkContent(a, b)
+//  {
+//   if (typeof a !== 'string' || typeof b !== 'string') 
+//     return false;
+
+//   const sortirovka = s => s.split('').sort().join('');  //ajratib , tartibga keltirish , keyin qayta qushish , to make them kinda same 
+
+//   return sortirovka(a)=== sortirovka(b); // birhil bo'lganligini tekshirish 
+// }
+
+// console.log(checkContent("mitgroup", "gmtiprou")); //true
+// console.log(checkContent("gayratjon", "jongayrat"));  //true
+
+// console.log(checkContent("gayratjon", "abror")); //false
 
 
 
