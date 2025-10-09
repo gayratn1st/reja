@@ -1,14 +1,41 @@
-// TASK-E 
+// TASK-F
 
-function getReverse(str) {
-  return str.split('').reverse().join('');  // used  almost similar  actions as the previous one , but .reverse() instead of splitting 
+function findDoublers(str) {
+
+  const doubler = new Set();     
+  for (let i = 0; i < str.length; i++) {
+    const founddoubler = str[i];
+    if (doubler.has(founddoubler)) {
+      return true;
+    }
+    doubler.add(founddoubler);      
+  }
+  return false;              
 }
+console.log(findDoublers("hello")); //tog'ri
+console.log(findDoublers("abc")); //xoto
+console.log(findDoublers("12321")); //tog'ri
 
-console.log(getReverse('hello'))
 
-console.log(getReverse('Gayratjon'))
 
-console.log(getReverse('조네스'))
+
+
+
+
+
+
+
+// // TASK-E 
+
+// function getReverse(str) {
+//   return str.split('').reverse().join('');  // used  almost similar  actions as the previous one , but .reverse() instead of splitting 
+// }
+
+// console.log(getReverse('hello'))
+
+// console.log(getReverse('Gayratjon'))
+
+// console.log(getReverse('조네스'))
 
 
 
